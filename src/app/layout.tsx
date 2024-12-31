@@ -23,15 +23,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <link rel="icon" href="/icon/favicon.svg" />
           {/* You can add more meta tags or links here */}
         </Head>
-        <body className="hw-dark-active">
-          <div id="smooth-wrapper">
-            <div id="smooth-content">
-              <div className="page-wrapper">
-                <Header />
-                {children}
-                <Footer />
-              </div>
-            </div>
+        <body>
+          <div className="page-wrapper">
+            <Header />
+            {children}
+            <Footer />
           </div>
         </body>
         <BootstrapClient />
