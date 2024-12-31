@@ -1,0 +1,37 @@
+// Example usage:
+:root {
+  @include generate-color-shades('blue', #226cf5);
+  @include generate-color-shades('green', #41a155);
+  @include generate-color-shades('red', #ff2e42);
+  @include generate-color-shades('yellow', #ebb925);
+  @include generate-color-shades('grey', #808080);
+  @include generate-color-shades('black', #000000, true); // True generate only Alpha variables for mentioned color
+  @include generate-color-shades('black', #ffffff, true); // True generate only Alpha variables for mentioned color
+}
+
+$fontPrimaryBold: Newyork, serif;
+
+$fontBodyThin: 'Raleway-Thin', sans-serif;
+$fontBodyLight: 'Raleway-Light', sans-serif;
+$fontBodyRegular: 'Raleway-Regular', sans-serif;
+$fontBodySemiBold: 'Raleway-SemiBold', sans-serif;
+$fontBodyBold: 'Raleway-Bold', sans-serif;
+
+$headings: (
+  'h1': 36,
+  'h2': 32,
+  'h3': 28,
+  'h4': 24,
+  'h5': 20,
+  'h6': 16,
+);
+
+@each $heading, $size in $headings {
+  #{$heading} {
+    font-size: $size * 1px;
+    line-height: ($size + 6) * 1px;
+    margin: 0;
+    margin-bottom: calc($size / 4) * 1px;
+    -webkit-font-smoothing: antialiased;
+  }
+}

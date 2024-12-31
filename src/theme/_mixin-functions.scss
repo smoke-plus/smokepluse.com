@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@function generate-color-scale($color, $onlyalpha) {
+  $shade-map: ();
+
+  @if $onlyalpha == false {
+    // Lighter shades (100 to 400) - mix with white
+    @for $i from 0 through 4 {
+      $percentage: (5 - $i) * (100% / 5); // Increasingly lighter shades
+      $lighter: mix(white, $color, $percentage);
+      $shade-map: map-merge(
+        $shade-map,
+        (
+          '#{$i}': #{$lighter},
+        )
+      );
+    }
+
+    // Add the main color as 500
+    $shade-map: map-merge(
+      $shade-map,
+      (
+        '5': $color,
+      )
+    );
+
+    // Darker shades (600 to 900) - mix with black
+    @for $i from 6 through 10 {
+      $percentage: ($i - 5) * (100% / 5); // Increasingly darker shades
+      $darker: mix(black, $color, $percentage);
+      $shade-map: map-merge(
+        $shade-map,
+        (
+          '#{$i}': $darker,
+        )
+      );
+    }
+  }
+
+  @for $i from 1 through 9 {
+    $opacity: $i / 10;
+    $alpha: rgba($color, $opacity);
+    $shade-map: map-merge(
+      $shade-map,
+      (
+        'a-#{$i}': $alpha,
+      )
+    );
+  }
+
+  @return $shade-map;
+}
+
+// Mixin to create CSS variables for color scale 100 to 900
+@mixin generate-color-shades($colorName, $color, $onlyalpha: false) {
+  $shades: generate-color-scale($color, $onlyalpha);
+  @each $name, $shade in $shades {
+    --#{$colorName}-#{$name}: #{$shade};
+  }
+}
