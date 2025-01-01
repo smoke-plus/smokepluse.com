@@ -2,25 +2,24 @@ import type { Metadata } from 'next';
 import BootstrapClient from 'src/vendors/BootstrapClient';
 import Header from 'src/components/Header/Header';
 import Head from 'next/head';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import 'src/theme/globals.scss';
 import Footer from 'src/components/Footer/Footer';
 import LoadScripts from 'src/vendors/LoadScripts';
+import 'src/theme/globals.scss';
 
 export const metadata: Metadata = {
-  title: 'hellowwworld',
-  description: `A Portfolio ctrated by Harsh Rana, 
-  For Describe the Web Development skill and Experience in IT industry, 
-  Adding some Personal information and Hobbies, And Contact Information`,
+  title: 'Smoke Pluse',
+  description: `A Smoke shop Informative website`,
+  icons: {
+    icon: 'assets/images/logo/Favicon.svg', // Path to your favicon
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <html className="dark" lang="en">
+      <html lang="en" className="smoke-pluse-wrapper">
         <Head>
-          <link rel="icon" href="/icon/favicon.svg" />
+          <link rel="icon" href="" />
           {/* You can add more meta tags or links here */}
         </Head>
         <body>
