@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
@@ -19,15 +20,16 @@ const Header = () => {
             </div>
             <ul className="main-menu">
               <li>
-                <a href="#0">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <a href="about.html">About Us</a>
+                <Link href="/cigar">Cigar</Link>
               </li>
-              {/* <li>
-                <a href="#0">
-                  Pages <i className="fa-regular fa-angle-down"></i>
-                </a>
+              <li>
+                <Link href="/hookka">Hookka</Link>
+              </li>
+              <li>
+                <Link href="/pipe">Pipe</Link>
                 <ul className="sub-menu">
                   <li className="subtwohober">
                     <a href="shop.html"> Shop Leftbar </a>
@@ -54,9 +56,15 @@ const Header = () => {
                     <a href="error.html"> 404 Error </a>
                   </li>
                 </ul>
-              </li> */}
+              </li>
               <li>
-                <a href="#0">Blog</a>
+                <Link href="/e-cigarate">E-Cigarate (vape)</Link>
+              </li>
+              <li>
+                <Link href="/smoke-accessories">Smoke Accessories</Link>
+              </li>
+              <li>
+                <Link href="/">About Us</Link>
               </li>
               <li>
                 <a href="contact.html">Contact Us</a>

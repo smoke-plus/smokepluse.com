@@ -14,7 +14,7 @@ export default function Home() {
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="slide-bg" data-background="assets/images/banner/banner-two-image1.jpg"></div>
-                <div className="container">
+                <div className="container h-100">
                   <div className="banner-two__content">
                     <h4 data-animation="fadeInUp" data-delay="1s">
                       <img src="assets/images/icon/fire.svg" alt="icon" /> GET
@@ -33,9 +33,9 @@ export default function Home() {
                       <h3>$99.00</h3>
                     </div>
                     <div className="btn-wrp mt-65">
-                      <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
+                      {/* <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
                         <span>Shop Now</span>
-                      </a>
+                      </a> */}
                       <a className="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp" data-delay="1.9s">
                         <span>View Details</span>
                       </a>
@@ -45,7 +45,7 @@ export default function Home() {
               </div>
               <div className="swiper-slide">
                 <div className="slide-bg" data-background="assets/images/banner/banner-two-image2.jpg"></div>
-                <div className="container">
+                <div className="container h-100">
                   <div className="banner-two__content">
                     <h4 data-animation="fadeInUp" data-delay="1s">
                       <img src="assets/images/icon/fire.svg" alt="icon" /> GET
@@ -64,9 +64,9 @@ export default function Home() {
                       <h3>$99.00</h3>
                     </div>
                     <div className="btn-wrp mt-65">
-                      <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
+                      {/* <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
                         <span>Shop Now</span>
-                      </a>
+                      </a> */}
                       <a className="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp" data-delay="1.9s">
                         <span>View Details</span>
                       </a>
@@ -76,7 +76,7 @@ export default function Home() {
               </div>
               <div className="swiper-slide">
                 <div className="slide-bg" data-background="assets/images/banner/banner-two-image3.jpg"></div>
-                <div className="container">
+                <div className="container h-100">
                   <div className="banner-two__content">
                     <h4 data-animation="fadeInUp" data-delay="1s">
                       <img src="assets/images/icon/fire.svg" alt="icon" /> GET
@@ -95,9 +95,9 @@ export default function Home() {
                       <h3>$99.00</h3>
                     </div>
                     <div className="btn-wrp mt-65">
-                      <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
+                      {/* <a href="shop.html" className="btn-one" data-animation="fadeInUp" data-delay="1.8s">
                         <span>Shop Now</span>
-                      </a>
+                      </a> */}
                       <a className="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp" data-delay="1.9s">
                         <span>View Details</span>
                       </a>
@@ -107,14 +107,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="banner-two__arry-btn">
+          {/* <div className="banner-two__arry-btn">
             <button className="arry-prev mb-15 banner-two__arry-prev">
               <i className="fa-light fa-chevron-left"></i>
             </button>
             <button className="arry-next active banner-two__arry-next">
               <i className="fa-light fa-chevron-right"></i>
             </button>
-          </div>
+          </div> */}
         </section>
         {/* <!-- Banner area end here --> */}
 
@@ -232,9 +232,9 @@ export default function Home() {
                       </a>
                     </h2>
                     <p className="fw-600">Sell globally in minutes with localized currencies languages, and experie in every market. only a variety of vaping products</p>
-                    <a className="btn-two" href="shop-single.html">
+                    {/* <a className="btn-two" href="shop-single.html">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                     <a className="off-btn" href="#0">
                       <img className="mr-10" src="assets/images/icon/fire.svg" alt="icon" />
                       GET <span className="primary-color">25% OFF</span> NOW
@@ -251,9 +251,9 @@ export default function Home() {
                       </a>
                     </h3>
                     <p>Whereas recognition of the inherent dignity</p>
-                    <a className="btn-two" href="shop-single.html">
+                    {/* <a className="btn-two" href="shop-single.html">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                   <div className="view__image">
                     <img src="assets/images/view/view-image2.jpg" alt="image" />
@@ -267,9 +267,9 @@ export default function Home() {
                       </a>
                     </h3>
                     <p>Whereas recognition of the inherent dignity</p>
-                    <a className="btn-two" href="shop-single.html">
+                    {/* <a className="btn-two" href="shop-single.html">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                   <div className="view__image">
                     <img src="assets/images/view/view-image3.jpg" alt="image" />
@@ -335,10 +335,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -366,10 +366,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -397,10 +397,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -428,10 +428,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -459,10 +459,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -490,10 +490,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -521,10 +521,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -552,10 +552,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -587,10 +587,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -618,10 +618,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -649,10 +649,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -680,10 +680,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -711,10 +711,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -746,10 +746,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -777,10 +777,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -808,10 +808,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -839,10 +839,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-xxl-3 col-xl-4 col-md-6">
@@ -870,10 +870,10 @@ export default function Home() {
                           <i className="fa-solid fa-star"></i>
                         </div>
                       </div>
-                      <a className="product__cart d-block bor-top" href="#0">
+                      {/* <a className="product__cart d-block bor-top" href="#0">
                         <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
                         <span>Add to cart</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -904,9 +904,9 @@ export default function Home() {
                       <br />
                       experie in every market. only a variety of vaping products
                     </p>
-                    <a className="btn-one wow fadeInUp" data-wow-delay=".3s" href="shop.html">
+                    {/* <a className="btn-one wow fadeInUp" data-wow-delay=".3s" href="shop.html">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                     <a className="off-btn wow fadeInUp" data-wow-delay=".4s" href="#0">
                       <img className="mr-10" src="assets/images/icon/fire.svg" alt="icon" />
                       GET <span className="primary-color">25% OFF</span> NOW
@@ -1057,9 +1057,9 @@ export default function Home() {
                       <a href="shop-2.html">best e-lequid</a>
                     </h3>
                     <p>Best E liquids from our huge collection</p>
-                    <a href="shop-2.html" className="btn-two mt-25">
+                    {/* <a href="shop-2.html" className="btn-two mt-25">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -1077,9 +1077,9 @@ export default function Home() {
                       <a href="shop-2.html">best vape flavours</a>
                     </h3>
                     <p>Best E liquids from our huge collection</p>
-                    <a href="shop-2.html" className="btn-two mt-25">
+                    {/* <a href="shop-2.html" className="btn-two mt-25">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -1097,9 +1097,9 @@ export default function Home() {
                       <a href="shop-2.html">Battery And Charger Kit</a>
                     </h3>
                     <p>Best E liquids from our huge collection</p>
-                    <a href="shop-2.html" className="btn-two mt-25">
+                    {/* <a href="shop-2.html" className="btn-two mt-25">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -1117,9 +1117,9 @@ export default function Home() {
                       <a href="shop-2.html">best vape tanks</a>
                     </h3>
                     <p>Best E liquids from our huge collection</p>
-                    <a href="shop-2.html" className="btn-two mt-25">
+                    {/* <a href="shop-2.html" className="btn-two mt-25">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -1137,9 +1137,9 @@ export default function Home() {
                       <a href="shop-2.html">POP Extra Strawberry</a>
                     </h3>
                     <p>Best E liquids from our huge collection</p>
-                    <a href="shop-2.html" className="btn-two mt-25">
+                    {/* <a href="shop-2.html" className="btn-two mt-25">
                       <span>Shop Now</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
