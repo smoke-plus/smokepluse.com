@@ -20,16 +20,16 @@ const Header = () => {
             </div>
             <ul className="main-menu">
               <li>
-                <Link href="/">Home</Link>
+                <a href="/">Home</a>
               </li>
               <li>
-                <Link href="/cigar">Cigar</Link>
+                <a href="/cigar">Cigar</a>
               </li>
               <li>
-                <Link href="/hookka">Hookka</Link>
+                <a href="/hookka">Hookka</a>
               </li>
               <li>
-                <Link href="/pipe">Pipe</Link>
+                <a href="/pipe">Pipe</a>
                 <ul className="sub-menu">
                   <li className="subtwohober">
                     <a href="shop.html"> Shop Leftbar </a>
@@ -58,13 +58,13 @@ const Header = () => {
                 </ul>
               </li>
               <li>
-                <Link href="/e-cigarate">E-Cigarate (vape)</Link>
+                <a href="/e-cigarate">E-Cigarate (vape)</a>
               </li>
               <li>
-                <Link href="/smoke-accessories">Smoke Accessories</Link>
+                <a href="/smoke-accessories">Smoke Accessories</a>
               </li>
               <li>
-                <Link href="/">About Us</Link>
+                <a href="/">About Us</a>
               </li>
               <li>
                 <a href="contact.html">Contact Us</a>

@@ -244,6 +244,18 @@
       prevEl: '.get-now__arry-left',
     },
   });
+
+  // Get swiper slider area start here ***
+  var product_thumb_swiper = new Swiper('.product_thumb', {
+    loop: 'true',
+    spaceBetween: 10,
+    speed: 300,
+    autoplay: true,
+    navigation: {
+      nextEl: '.get-now__arry-right',
+      prevEl: '.get-now__arry-left',
+    },
+  });
   // Get swiper slider area end here ***
 
   // Isotope area start here ***
