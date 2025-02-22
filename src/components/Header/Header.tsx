@@ -23,9 +23,9 @@ const Header = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/cigar">Cigar</a>
+                <a href="/products">Products</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/hookka">Hookka</a>
               </li>
               <li>
@@ -62,7 +62,7 @@ const Header = () => {
               </li>
               <li>
                 <a href="/smoke-accessories">Smoke Accessories</a>
-              </li>
+              </li> */}
               <li>
                 <a href="/">About Us</a>
               </li>
