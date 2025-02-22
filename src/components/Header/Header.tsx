@@ -73,7 +73,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-
       {/* <!-- Preloader area start --> */}
       <div className="loading">
         <span className="text-capitalize">L</span>
@@ -84,10 +83,8 @@ const Header = () => {
         <span>n</span>
         <span>g</span>
       </div>
-
       <div id="preloader"></div>
       {/* <!-- Preloader area end --> */}
-
       {/* <!-- Mouse cursor area start here --> */}
       <div className="mouse-cursor cursor-outer"></div>
       <div className="mouse-cursor cursor-inner"></div>

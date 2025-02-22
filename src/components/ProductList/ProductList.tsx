@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
 
 interface Product {
   handleId: string;
@@ -43,7 +43,9 @@ interface CustomTextField {
 
 const ProductList = () => {
   const [data, setData] = useState<Product[] | null>(null);
-  const [newName, setNewName] = useState('');
+  const [uniqueTagNames, setUniqueTagNames] = useState<string[]>([]);
+  const [filterData, setFilterData] = useState<Product[] | null>(null);
+  const [filterArray, setFilterArray] = useState<string[]>([]);
 
   useEffect(() => {
     fetch('/api/data')
@@ -74,9 +76,10 @@ const ProductList = () => {
         );
 
         const uniqueCollections = [...new Set(collections)];
-        console.log('uniqueCollections', uniqueCollections);
+        setUniqueTagNames(uniqueCollections.filter((tagname) => data.some((item) => item.collection.includes(tagname))));
 
         setData(data);
+        setFilterData(data);
       });
   }, []);
 
@@ -104,60 +107,93 @@ const ProductList = () => {
   //     setData(result.newData);
   //   };
 
+  const handleFilterUpdate = (e: any, tag: any) => {
+    if (e.target.checked) {
+      setFilterArray([...filterArray, tag]);
+    } else {
+      setFilterArray(filterArray.filter((existingItem) => existingItem !== tag));
+    }
+  };
+
+  useEffect(() => {
+    if (filterArray.length > 0 && filterData && data) {
+      setFilterData(data.filter((fData) => filterArray.some((tag) => fData.collection.includes(tag))));
+    } else {
+      setFilterData(data);
+    }
+  }, [filterArray]);
+
   return (
     <>
-      <div className="row g-4">
-        {data ? (
-          data.map((product) => {
-            return (
-              <div key={product.handleId} className="col-xxl-3 col-xl-4 col-md-6">
-                <div className="product__item bor h-100">
-                  {/* <a href="#0" className="wishlist">
+      <div className="row">
+        <div className="col-lg-2">
+          <div className="d-flex align-items-center justify-content-between">
+            <p>Total Results</p> <h3>{filterData?.length}</h3>
+          </div>
+          <hr className="mb-10" />
+          {uniqueTagNames.map((tag) => {
+            tag = tag.trim();
+            if (tag !== '')
+              return (
+                <div key={tag} className="filter-checkbox" title={tag}>
+                  <label htmlFor={tag}>
+                    <input className="me-2 mt-1" type="checkbox" id={tag} onChange={(e) => handleFilterUpdate(e, tag)} />
+                    {tag}
+                  </label>
+                </div>
+              );
+          })}
+        </div>
+        <div className="col-lg-10">
+          <div className="row g-4">
+            {filterData ? (
+              filterData.map((product) => {
+                return (
+                  <div key={product.handleId} data-tags={product.collection.join(',')} className="col-xxl-3 col-xl-4 col-md-6">
+                    <div className="product__item bor h-100">
+                      {/* <a href="#0" className="wishlist">
                     <i className="fa-regular fa-heart"></i>
                   </a> */}
-                  <a href="shop-single.html" className="product__image pt-20 d-block">
-                    {product.productImageUrl.length > 1 ? (
-                      <div className="swiper product_thumb">
-                        <div className="swiper-wrapper">
-                          {product.productImageUrl.map((url) => (
-                            <div className="swiper-slide" key={url}>
-                              {getImage(url)}
+                      <a href="/" className="product__image d-block">
+                        {product.productImageUrl.length > 1 ? (
+                          <div className="swiper product_thumb">
+                            <div className="swiper-wrapper">
+                              {product.productImageUrl.map((url) => (
+                                <div className="swiper-slide" key={url}>
+                                  {getImage(url)}
+                                </div>
+                              ))}
                             </div>
+                          </div>
+                        ) : (
+                          <>{getImage(product.productImageUrl[0])}</>
+                        )}
+                      </a>
+                      <div className="product__content">
+                        <p className="mb-10">
+                          {/* <a className="primary-hover" href="shop-single.html"> */}
+                          {product.name}
+                          {/* </a> */}
+                        </p>
+                        {/* {product.discountMode && Number(product.discountValue) > 0 && <del className="mr-10">${product.discountValue}</del>} */}
+                        {/* <span className="primary-color ">${product.price}</span> */}
+                        <div className="tags">
+                          {product.collection.map((item) => (
+                            <span className="badge" key={item}>
+                              {item}
+                            </span>
                           ))}
                         </div>
                       </div>
-                    ) : (
-                      <>{getImage(product.productImageUrl[0])}</>
-                    )}
-                  </a>
-                  <div className="product__content">
-                    <p className="mb-10">
-                      {/* <a className="primary-hover" href="shop-single.html"> */}
-                      {product.name}
-                      {/* </a> */}
-                    </p>
-                    {/* {product.discountMode && Number(product.discountValue) > 0 && <del className="mr-10">${product.discountValue}</del>} */}
-                    <span className="primary-color ">${product.price}</span>
-
-                    {/* <div className="star mt-20">
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                      </div> */}
+                    </div>
                   </div>
-                  {/* <a className="product__cart d-block bor-top" href="#0">
-                        <i className="fa-regular fa-cart-shopping primary-color me-1"></i>
-                        <span>Add to cart</span>
-                      </a> */}
-                </div>
-              </div>
-            );
-          })
-        ) : (
-          <p>Loading data...</p>
-        )}
+                );
+              })
+            ) : (
+              <p>Loading data...</p>
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
