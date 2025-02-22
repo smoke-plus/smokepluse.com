@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductList from 'src/components/ProductList/ProductList';
 
-const Cigar = () => {
+const Products = () => {
   return (
     <>
       {/* <!-- Product area start here --> */}
@@ -13,7 +13,6 @@ const Cigar = () => {
               <h2>Products</h2>
             </div>
           </div>
-
           <ProductList></ProductList>
         </div>
       </section>
@@ -22,4 +21,4 @@ const Cigar = () => {
   );
 };
 
-export default Cigar;
+export default Products;
