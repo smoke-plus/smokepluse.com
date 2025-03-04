@@ -76,7 +76,24 @@ const ProductList = () => {
         );
 
         const uniqueCollections = [...new Set(collections)];
-        setUniqueTagNames(uniqueCollections.filter((tagname) => data.some((item) => item.collection.includes(tagname))));
+        setUniqueTagNames(
+          uniqueCollections.filter((tagname) => {
+            /* WIP for Sub tags */
+
+            /* const filteredItems = data.filter((item) => item.collection.includes(tagname));
+            let filteredTags;
+            if (filteredItems.length > 1) {
+              filteredTags = filteredItems.flatMap((item) =>
+                item.collection
+                  .join('')
+                  .split(/[;,]/)
+                  .map((c) => c.trim())
+              );
+              console.log(filteredItems, [...new Set(filteredTags)]);
+            } */
+            return data.some((item) => item.collection.includes(tagname));
+          })
+        );
 
         setData(data);
         setFilterData(data);
